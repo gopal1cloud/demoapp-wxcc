@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WXCC Auto Pause/Resume Widget</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Recording Control (Auto Pause/Resume)</h1>
+      <div class="status-row">
+        <span>Status:</span>
+        <span id="status-indicator" class="badge badge-unknown">Unknown</span>
+      </div>
+      <iframe id="payment-frame" src="payment-frame.html" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+      <div class="log" id="log"></div>
+    </div>
+    <script type="module" src="widget.js"></script>
+  </body>
+</html>

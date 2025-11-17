@@ -1,0 +1,9 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Secure Payment Form</title>
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:12px;}input,button{display:block;margin:8px 0;padding:8px;width:100%;max-width:320px;}.secure{font-weight:bold;color:#1565c0;}</style></head>
+<body><h3 class="secure">Secure Payment Area</h3>
+<input type="text" placeholder="Card Number" id="card"/><input type="text" placeholder="Expiry Date" id="expiry"/><input type="text" placeholder="CVV" id="cvv"/>
+<button id="done">Submit Payment</button>
+<script>const parentOrigin=window.location.origin;function pause(){window.parent.postMessage({action:"pause"},parentOrigin);}function resume(){window.parent.postMessage({action:"resume"},parentOrigin);}
+["card","expiry","cvv"].forEach(id=>{const el=document.getElementById(id);el.addEventListener("focus",pause);el.addEventListener("blur",resume);});
+document.getElementById("done").addEventListener("click",()=>{resume();alert("Payment submitted");});</script></body></html>

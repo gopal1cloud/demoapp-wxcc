@@ -1,0 +1,16 @@
+{
+  "name": "wxcc-client-pause-widget",
+  "version": "2.0.0",
+  "title": "Client Auto Pause/Resume",
+  "description": "Client-only Webex Contact Center widget with embedded PCI form.",
+  "icon": "🔒",
+  "entry": "/index.html",
+  "permissions": [
+    "contactCenter:getAccessToken",
+    "contactCenter:getActiveCall",
+    "contactCenter:on",
+    "contactCenter:off"
+  ],
+  "author": "DemoApp-WXCC",
+  "homepage": "https://gopal1cloud.github.io/demoapp-wxcc"
+}
